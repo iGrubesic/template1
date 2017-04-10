@@ -118,8 +118,8 @@ header {
 }
 
 .breakpoint {
-    height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/arch2.jpg') no-repeat center center / cover;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/arch2.jpg') no-repeat center center / cover;
     text-align: center;
     .container {
         @include clearfix();
@@ -129,9 +129,10 @@ header {
 
     .quote {
         @include position(absolute, 50% null -50% null);
-        font-size: 3rem;
+        font-size: 2.5rem;
         display: block;
         color: white;
+        font-weight: 400;
 
     }
 }
