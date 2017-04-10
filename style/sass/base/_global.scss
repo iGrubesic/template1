@@ -40,6 +40,8 @@ img {
 
 }
 
+
+
 .title {
 	font-size: 9rem;
 	color: gold;
@@ -48,8 +50,31 @@ img {
 	font-weight: 500;
 }
 
+.subtitle {
+	font-size: 4rem;
+	letter-spacing: .5px;
+	color: $primary-color;
+}
+
+//helper for vertical aligning
 .alignMiddle {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
+}
+
+.btn {
+	cursor: pointer;
+	outline: none;
+	border: none;
+	height: 36px;
+    line-height: 36px;
+    padding: 0 2rem;
+    text-transform: uppercase;
+	&_primary {
+		background: #00BFB2;
+		color: $secondary-color;
+		font-weight: 600;
+		@include shadow();
+	}
 }

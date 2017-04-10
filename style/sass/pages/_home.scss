@@ -1,6 +1,6 @@
 header {
+   
     background: url('../img/mainBG.jpg') no-repeat center center / cover;
-    width: 100%;
     height: 100vh;
     position: relative;
     .container {
@@ -8,18 +8,26 @@ header {
     }
 
     nav {
+        @include clearfix();
+        width: 100%;
         padding-top: 2rem;
         position: fixed;
+        left: 0;
+        background: $primary-color;
+        padding: 1.5rem 0;
+        z-index: 5;
+       
 
         ul {
-            width: 80%;
-            margin: 0 auto;
+            background: $primary-color;
             text-align: center;
-            position: fixed;
+
             li {
                 display: inline-block;
                 font-size: 2rem;
                 margin: 0 2rem;
+                cursor: pointer;
+            
                 a {
                     padding: 0 1rem;
                     color: whitesmoke;
@@ -49,4 +57,81 @@ header {
         margin: 0 auto;
     }
 
+}
+
+.products {
+    height: 700px; 
+    background: $secondary-color;
+    h2 {
+        text-align: center;
+        padding: 4rem;
+    }
+
+    .row_1 {
+        @include outer-container();
+        margin: 0 auto;
+    }
+
+    .row_2 {
+        padding-top: 4rem;
+    }
+
+    .card{
+        @include span-columns(3);
+        height: 250px;
+        padding: 0 20px 0 20px;
+        margin: 0;
+    }
+    .inner {
+        @include bright-shadow();
+        height: 100%;
+        cursor: pointer;
+        &:hover{
+           
+        }
+
+        &_1 {
+            background: url('../img/design/room1.jpg')  no-repeat center center / cover;
+        }
+        &_2 {
+            background: url('../img/design/room2.jpg')  no-repeat center center / cover;
+        }
+        &_3 {
+            background: url('../img/design/room3.jpg')  no-repeat center center / cover;
+        }
+        &_4 {
+            background: url('../img/design/room4.jpg')  no-repeat center center / cover;
+        }
+        &_5 {
+            background: url('../img/design/room5.jpg')  no-repeat center center / cover;
+        }
+        &_6 {
+            background: url('../img/design/room6.jpg')  no-repeat center center / cover;
+        }
+        &_7 {
+            background: url('../img/design/room7.jpg')  no-repeat center center / cover;
+        }
+        &_8 {
+            background: url('../img/design/room8.jpg')  no-repeat center center / cover;
+        }
+    }
+}
+
+.breakpoint {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/arch2.jpg') no-repeat center center / cover;
+    text-align: center;
+    .container {
+        @include clearfix();
+        height: 100%;
+        position: relative;
+    }
+
+    .quote {
+        @include position(absolute, 50% null -50% null);
+        font-size: 3rem;
+        display: block;
+        color: white;
+
+    }
 }
