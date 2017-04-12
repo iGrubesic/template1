@@ -24,7 +24,7 @@ header {
 
             li {
                 display: inline-block;
-                font-size: 2rem;
+                font-size: 1.7rem;
                 margin: 0 2rem;
                 cursor: pointer;
             
@@ -39,7 +39,7 @@ header {
                         &:before {
                             content: '';
                             @include position(absolute, null 0 -3px 0);
-                            width: 79px;
+                            width: 70px;
                             height: 2px;
                             background: gold;
                         }
@@ -83,11 +83,33 @@ header {
         margin: 0;
     }
     .inner {
+        @include position(relative);
         @include bright-shadow();
         height: 100%;
         cursor: pointer;
         &:hover{
-           
+            button {
+                @include position(absolute, 50% -48px -50% 48px);
+                z-index: 8;
+                visibility: visible;
+                display: block;
+                &:hover {
+                    background-color: #2ECAC0;
+                }
+            }
+            &:after {
+                @include position(absolute, 0 null 0 null);
+                display: block;
+                content: '';
+                background-color: rgba(0,0,0,0.4);
+                z-index: 5;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        
+        button {
+            display: none;
         }
 
         &_1 {
@@ -121,6 +143,7 @@ header {
     height: 60vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/arch2.jpg') no-repeat center center / cover;
     text-align: center;
+    border-bottom: 2px solid $secondary-color;
     .container {
         @include clearfix();
         height: 100%;
@@ -134,5 +157,15 @@ header {
         color: white;
         font-weight: 400;
 
+    }
+}
+
+.aboutUs {
+    height: 70vh;
+    background: $primary-color;
+    h2 {
+        color: $secondary-color;
+        text-align: center;
+        padding: 4rem;
     }
 }
