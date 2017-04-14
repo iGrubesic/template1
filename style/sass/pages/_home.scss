@@ -100,6 +100,15 @@ header {
                 }
             }
             &:after {
+                opacity: 1;
+                @include transition(all .4s ease-in-out);
+
+            }
+        
+        }
+
+        &:after {
+                opacity: 0;
                 @include position(absolute, 0 null 0 null);
                 display: block;
                 content: '';
@@ -108,7 +117,6 @@ header {
                 height: 100%;
                 width: 100%;
             }
-        }
         
         button {
             display: none;
@@ -138,6 +146,9 @@ header {
         &_8 {
             background: url('../img/design/room8.jpg')  no-repeat center center / cover;
         }
+    
+    
+    
     }
 }
 
